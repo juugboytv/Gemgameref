@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gem Game Reference</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gem Game Reference</h1>
+        <nav>
+            <button id="homeBtn" class="nav-btn active">Home</button>
+            <button id="gameBtn" class="nav-btn">Game</button>
+            <button id="settingsBtn" class="nav-btn">Settings</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="homeSection" class="section active">
+            <h2>Welcome to Gem Game Reference</h2>
+            <p>Your comprehensive guide to gem-based gaming.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Gems</h3>
+                    <span id="totalGems">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Level</h3>
+                    <span id="playerLevel">1</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Score</h3>
+                    <span id="playerScore">0</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="gameSection" class="section">
+            <h2>Game Area</h2>
+            <div class="game-board">
+                <div id="gameGrid" class="grid"></div>
+                <div class="game-controls">
+                    <button id="startBtn" class="btn-primary">Start Game</button>
+                    <button id="pauseBtn" class="btn-secondary">Pause</button>
+                    <button id="resetBtn" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="settingsSection" class="section">
+            <h2>Settings</h2>
+            <div class="settings-form">
+                <div class="setting-group">
+                    <label for="playerName">Player Name:</label>
+                    <input type="text" id="playerName" placeholder="Enter your name">
+                </div>
+                <div class="setting-group">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label for="soundEnabled">Sound:</label>
+                    <input type="checkbox" id="soundEnabled" checked>
+                </div>
+                <button id="saveSettingsBtn" class="btn-primary">Save Settings</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gem Game Reference. Built with modular architecture.</p>
+    </footer>
+
+    <!-- Module Scripts -->
+    <script src="gdd.js"></script>
+    <script src="systems.js"></script>
+    <script src="managers.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
